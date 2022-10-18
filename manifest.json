@@ -1,23 +1,15 @@
 {
-    "name": "Invert.io",
-    "version": "1.0.0",
-    "manifest_version": 3,   //version of chrome
-    "description": "Bored of looking at websites the same way? Meet Invert.io, a chrome extension that can change your website from dark mood to light mode and vice versa! :) ",
-    "minimum_chrome_version": "93", 
+    "name": "DevSage Adblocker",
+    "version": "1.0",
+    "description": "DevSage Adblocker Tutorial",
+    "permissions": ["webRequest", "webRequestBlocking", "<all_urls>"],
     "background": {
-        "service_worker": "popup.js",  //script files to be added/needed in the background to build the extension
-        "type": "module"
+        "background.service_worker": ["background.js"]
     },
-    "action": {
-        "default_title": "Invert.io",
-        "default_popup": "popup.html"
+    "icons": {
+        "16": "icons/logo_16x16.png",
+        "48": "icons/logo_48x48.png",
+        "128": "icons/logo_128x128.png"
     },
-    "permissions":[
-        "tabs"
-    ],
-    "optional_host_permissions": [ //gives access to all http,https,and all tabs
-        "*://*/*",
-        "https://*/*",
-        "http://*/*"
-      ]
+    "manifest_version": 3
 }
